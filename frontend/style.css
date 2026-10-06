@@ -1,0 +1,453 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #111827;
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background-color: #172033;
+
+    border-bottom: 2px solid #26344f;
+}
+
+
+header h1 {
+    font-size: 32px;
+
+    color: #22d3ee;
+
+    margin-bottom: 10px;
+}
+
+
+header p {
+    color: #9ca3af;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 30px auto;
+}
+
+
+/* =========================
+   CREATE FOLDER
+========================= */
+
+.create-folder {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+#folderInput {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #374151;
+
+    border-radius: 8px;
+
+    background-color: #1f2937;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+#folderInput::placeholder {
+    color: #9ca3af;
+}
+
+
+#folderInput:focus {
+    outline: 2px solid #22d3ee;
+}
+
+
+#createFolderBtn {
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #06b6d4;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#createFolderBtn:hover {
+    background-color: #0891b2;
+}
+
+
+/* =========================
+   FOLDER
+========================= */
+
+.folder {
+    background-color: #1f2937;
+
+    border: 1px solid #374151;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+}
+
+
+/* Folder Header */
+
+.folder-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px;
+
+    background-color: #172554;
+}
+
+
+.folder-name {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+.folder-buttons {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    cursor: pointer;
+}
+
+
+.add-subfolder-btn {
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    background-color: #2563eb;
+
+    color: white;
+}
+
+
+.add-subfolder-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+.delete-folder-btn {
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    background-color: #dc2626;
+
+    color: white;
+}
+
+
+.delete-folder-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+/* =========================
+   SUBFOLDERS
+========================= */
+
+.subfolders {
+    padding: 15px;
+}
+
+
+.subfolder {
+    background-color: #111827;
+
+    border: 1px solid #374151;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.subfolder:last-child {
+    margin-bottom: 0;
+}
+
+
+.subfolder-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px;
+
+    background-color: #273449;
+}
+
+
+.subfolder-name {
+    font-weight: bold;
+
+    color: #67e8f9;
+}
+
+
+.subfolder-buttons {
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.add-task-btn {
+    border: none;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    background-color: #16a34a;
+
+    color: white;
+}
+
+
+.add-task-btn:hover {
+    background-color: #15803d;
+}
+
+
+.delete-subfolder-btn {
+    border: none;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    background-color: #dc2626;
+
+    color: white;
+}
+
+
+.delete-subfolder-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+/* =========================
+   TASKS
+========================= */
+
+.tasks {
+    padding: 10px 15px;
+}
+
+
+.task {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    background-color: #1f2937;
+
+    border-radius: 6px;
+}
+
+
+.task:last-child {
+    margin-bottom: 0;
+}
+
+
+.task-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.task-checkbox {
+    width: 18px;
+
+    height: 18px;
+
+    cursor: pointer;
+}
+
+
+.task-title {
+    color: white;
+
+    font-size: 15px;
+}
+
+
+.task.completed .task-title {
+    text-decoration: line-through;
+
+    color: #6b7280;
+}
+
+
+.delete-task-btn {
+    border: none;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    background-color: #ef4444;
+
+    color: white;
+}
+
+
+.delete-task-btn:hover {
+    background-color: #dc2626;
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #9ca3af;
+
+    background-color: #1f2937;
+
+    border-radius: 10px;
+
+    border: 1px solid #374151;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .create-folder {
+        flex-direction: column;
+    }
+
+
+    #createFolderBtn {
+        width: 100%;
+    }
+
+
+    .folder-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .folder-buttons {
+        width: 100%;
+    }
+
+
+    .subfolder-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .task {
+        align-items: flex-start;
+    }
+
+}
